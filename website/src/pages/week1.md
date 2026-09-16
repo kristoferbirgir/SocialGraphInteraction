@@ -22,10 +22,14 @@ _TODO: what did you do? Which tools/notebook, which part of the dataset, which m
 
 ## Figure / table
 
-_TODO: embed one figure or table exported from your week-1 notebook (see
-[week1/](https://github.com/kristoferbirgir/SocialGraphInteraction/tree/main/week1) in the
-main repo). Export a PNG from matplotlib and reference it here, e.g.
-`![alt text](../../assets/week1/your-figure.png)`._
+Computed from the real week-1 snapshot (303 nodes, 1,784 directed edges) via
+[week1/02_marvel_scaffold.ipynb](https://github.com/kristoferbirgir/SocialGraphInteraction/tree/main/week1/02_marvel_scaffold.ipynb):
+
+![In-degree and out-degree distributions, linear and log-log axes](./week1-assets/degree-distributions.png)
+
+![Marvel network giant component, 277 characters, node size proportional to degree](./week1-assets/giant-component.png)
+
+_TODO: these are raw computed outputs, not yet interpreted — add a table or a second figure if useful._
 
 ## Findings
 
