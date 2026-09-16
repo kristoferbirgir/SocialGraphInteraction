@@ -1,0 +1,6 @@
+# data/processed/
+
+Derived/generated data only (e.g. cached computations, exported figures'
+underlying tables). Nothing here is hand-authored, and nothing here is a
+substitute for the immutable files in `data/raw/`. Safe to delete and
+regenerate at any time.

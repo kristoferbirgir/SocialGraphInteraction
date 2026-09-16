@@ -1,0 +1,5 @@
+# tiny fixture: directed edges, including a reciprocal pair (Alpha<->Bravo)
+# source	target
+Alpha	Bravo
+Bravo	Alpha
+Alpha	Charlie

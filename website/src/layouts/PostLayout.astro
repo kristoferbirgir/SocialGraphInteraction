@@ -1,0 +1,29 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { withBase } from "../lib/paths";
+
+// Astro passes markdown frontmatter as a single `frontmatter` prop, not
+// individual props — so we destructure it from there, not from Astro.props directly.
+interface Frontmatter {
+  title: string;
+  week?: number;
+  date?: string;
+  status?: string;
+}
+
+const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const { title, week, date, status } = frontmatter;
+---
+
+<BaseLayout title={title}>
+  <p><a href={withBase("posts")}>&larr; All posts</a></p>
+  <article class="card">
+    <h1>{title}</h1>
+    <p class="meta">
+      {week ? <span class="tag">Week {week}</span> : null}
+      {status ? <span class="tag">{status}</span> : null}
+      {date ? <span>{date}</span> : null}
+    </p>
+    <slot />
+  </article>
+</BaseLayout>

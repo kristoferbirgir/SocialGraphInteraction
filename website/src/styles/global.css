@@ -1,0 +1,127 @@
+:root {
+  --bg: #0b0f19;
+  --bg-panel: #121826;
+  --text: #e6e9f0;
+  --text-muted: #9aa4b7;
+  --accent: #6ee3ff;
+  --accent-2: #ff8ad1;
+  --border: #232b3d;
+  --max-width: 860px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(110, 227, 255, 0.12), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(255, 138, 209, 0.10), transparent 40%);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+header.site-header nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+header.site-header .brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header.site-header .brand svg {
+  display: block;
+}
+
+header.site-header .links {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+header.site-header .links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+header.site-header .links a:hover {
+  color: var(--accent);
+}
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-list-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+.post-list-item .meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(110, 227, 255, 0.12);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

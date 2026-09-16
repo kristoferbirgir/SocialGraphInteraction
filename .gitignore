@@ -7,9 +7,21 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
 
 # Node
 node_modules/
+
+# Astro / website build output
+website/dist/
+website/.astro/
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
 
 # IDE
 .vscode/

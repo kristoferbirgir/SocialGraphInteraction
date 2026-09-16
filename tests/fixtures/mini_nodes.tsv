@@ -1,0 +1,8 @@
+# tiny fixture: node roster including an isolate (Delta) and characters that
+# only appear via edges are NOT listed here on purpose, to prove nodes come
+# from this file, not from the edge list.
+node_id	name	wikidata_id	url	description
+Alpha	Alpha	Q1	https://example.org/Alpha	Test character A.
+Bravo	Bravo	Q2	https://example.org/Bravo	Test character B.
+Charlie	Charlie	Q3	https://example.org/Charlie	Test character C.
+Delta	Delta	Q4	https://example.org/Delta	Isolate with no edges.

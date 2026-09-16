@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+import { withBase } from "../lib/paths";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "DTU Social Graphs and Interactions (02805) — group site." } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Social Graph Interaction</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <a class="brand" href={withBase("")}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="5" cy="6" r="2.4" fill="#6ee3ff" />
+            <circle cx="19" cy="5" r="2" fill="#ff8ad1" />
+            <circle cx="12" cy="14" r="2.6" fill="#6ee3ff" />
+            <circle cx="5" cy="19" r="2" fill="#ff8ad1" />
+            <circle cx="19" cy="18" r="2.2" fill="#6ee3ff" />
+            <path
+              d="M5 6 12 14 M19 5 12 14 M5 19 12 14 M19 18 12 14 M5 6 5 19"
+              stroke="#3a4560"
+              stroke-width="1.2"
+            />
+          </svg>
+          Social Graph Interaction
+        </a>
+        <div class="links">
+          <a href={withBase("")}>Home</a>
+          <a href={withBase("about")}>About</a>
+          <a href={withBase("posts")}>Posts</a>
+        </div>
+      </nav>
+    </header>
+    <main class="wrap">
+      <slot />
+      <footer class="site-footer">
+        <p>
+          DTU course 02805 · Social Graphs and Interactions. Group project site, built with Astro.
+          Source on <a href="https://github.com/kristoferbirgir/SocialGraphInteraction">GitHub</a>.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

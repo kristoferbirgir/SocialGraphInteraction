@@ -1,0 +1,19 @@
+{
+  "source_page": "https://sunelehmann.com/socialgraphs2026-web/data/",
+  "week1_instructions": "https://sunelehmann.com/socialgraphs2026-web/weeks/week1.html",
+  "snapshot_identity": "week 1 release, frozen 2026-08-26 (per file header comments)",
+  "retrieved_at": "2026-09-16T08:37:51Z",
+  "retrieved_by": "manual curl fetch during initial repo setup; scripts/download_marvel_week1.py reproduces this",
+  "files": {
+    "week1_nodes.tsv": {
+      "source_url": "https://sunelehmann.com/socialgraphs2026-web/data/week1_nodes.tsv",
+      "sha256": "a10ec309ac60ea8b72bcc1a18aba801414896676dac172619def0435e585391e",
+      "size_bytes": 63413
+    },
+    "week1_edges.tsv": {
+      "source_url": "https://sunelehmann.com/socialgraphs2026-web/data/week1_edges.tsv",
+      "sha256": "87be017a35e8f27a1f1bc0912ebb5723c0084e460cb2dbd0d2abd0e83fc644b2",
+      "size_bytes": 61379
+    }
+  }
+}

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+---
+
+<BaseLayout title="Home">
+  <section class="card">
+    <h1>Social Graph Interaction</h1>
+    <p>
+      This is our group's site for DTU course <strong>02805 — Social Graphs and Interactions</strong>.
+      Each week we explore the shared Marvel Wikipedia-links dataset with that week's tools, and post
+      a short data story here.
+    </p>
+    <p>
+      <a href={withBase("posts")}>Read our posts →</a> ·
+      <a href={withBase("about")}>About the group →</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>What this site is</h2>
+    <ul>
+      <li>A running log of weekly experiments on one shared network dataset.</li>
+      <li>Built with <a href="https://astro.build">Astro</a>, deployed on GitHub Pages, no backend.</li>
+      <li>Figures come from our Jupyter notebooks in the main repository.</li>
+    </ul>
+  </section>
+</BaseLayout>
