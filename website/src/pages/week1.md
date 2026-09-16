@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../layouts/PostLayout.astro
 title: "Week 1: Networks — DRAFT"
 week: 1
 status: "DRAFT"
