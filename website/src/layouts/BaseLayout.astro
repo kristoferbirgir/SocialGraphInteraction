@@ -8,6 +8,19 @@ interface Props {
 }
 
 const { title, description = "DTU Social Graphs and Interactions (02805) — group site." } = Astro.props;
+
+// Built from whatever posts actually exist, so the dropdown never links to a week that hasn't been written yet.
+const postModules = import.meta.glob("../pages/posts/*.md", { eager: true }) as Record<
+  string,
+  { frontmatter: { title: string; week?: number } }
+>;
+const weekLinks = Object.entries(postModules)
+  .map(([path, mod]) => ({
+    slug: path.split("/").pop()!.replace(/\.md$/, ""),
+    title: mod.frontmatter.title,
+    week: mod.frontmatter.week,
+  }))
+  .sort((a, b) => (a.week ?? 0) - (b.week ?? 0));
 ---
 
 <html lang="en">
@@ -39,6 +52,21 @@ const { title, description = "DTU Social Graphs and Interactions (02805) — gro
           <a href={withBase("")}>Home</a>
           <a href={withBase("about")}>About</a>
           <a href={withBase("posts")}>Posts</a>
+          <details class="nav-dropdown">
+            <summary>Weeks</summary>
+            <ul>
+              {weekLinks.length === 0 && <li class="placeholder">No posts yet</li>}
+              {
+                weekLinks.map((post) => (
+                  <li>
+                    <a href={withBase(`posts/${post.slug}`)}>
+                      {post.week ? `Week ${post.week}` : post.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
         </div>
       </nav>
     </header>
@@ -53,3 +81,4 @@ const { title, description = "DTU Social Graphs and Interactions (02805) — gro
     </main>
   </body>
 </html>
+

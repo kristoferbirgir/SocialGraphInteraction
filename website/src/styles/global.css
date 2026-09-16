@@ -85,6 +85,58 @@ header.site-header .links a:hover {
   color: var(--accent);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-dropdown summary:hover {
+  color: var(--accent);
+}
+
+.nav-dropdown summary::after {
+  content: " ▾";
+  font-size: 0.75rem;
+}
+
+.nav-dropdown ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin: 0;
+  list-style: none;
+  min-width: 9rem;
+  z-index: 10;
+}
+
+.nav-dropdown li {
+  padding: 0;
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-dropdown li a:hover {
+  background: rgba(110, 227, 255, 0.12);
+  color: var(--accent);
+}
+
 .card {
   background: var(--bg-panel);
   border: 1px solid var(--border);
